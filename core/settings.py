@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     # 3rd Party Apps
     "rest_framework",
     "corsheaders",
+    # 1st Party Apps
+    "customers.apps.CustomersConfig",
 ]
 
 MIDDLEWARE = [
