@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "corsheaders",
     # 1st Party Apps
     "customers.apps.CustomersConfig",
+    "products.apps.ProductsConfig",
 ]
 
 MIDDLEWARE = [
