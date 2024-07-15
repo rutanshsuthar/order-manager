@@ -14,7 +14,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = get_parameter('/swift_order/api/DJANGO_SECRET_KEY')
 DEBUG = bool(get_parameter('/swift_order/api/DEBUG'))
-ALLOWED_HOSTS = [get_parameter('/swift_order/api/ALLOWED_HOSTS')]
+ALLOWED_HOSTS = [get_parameter('/swift_order/api/ALLOWED_HOSTS'),
+                 get_parameter('/swift/order/api/ALLOWED_HOSTS_IP')]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -69,7 +70,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database Settings
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': get_parameter('/swift_order/api/DB_NAME'),
         'USER': get_parameter('/swift_order/api/DB_USER'),
         'PASSWORD': get_parameter('/swift_order/api/DB_PASSWORD'),
