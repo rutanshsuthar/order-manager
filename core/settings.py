@@ -1,5 +1,5 @@
+# core/settings.py
 from pathlib import Path
-from dotenv import load_dotenv
 
 import boto3
 
@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     "customers.apps.CustomersConfig",
     "products.apps.ProductsConfig",
     "orders.apps.OrdersConfig",
+    "pdfs.apps.PdfsConfig",
 ]
 
 MIDDLEWARE = [
